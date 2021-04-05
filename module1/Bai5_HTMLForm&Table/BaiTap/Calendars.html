@@ -4,54 +4,69 @@
     <meta charset="UTF-8">
     <title>Calendars</title>
     <style>
-        h2{
+        h2 {
             text-align: center;
             color: blue;
             font-size: 30px;
             font-family: sans-serif;
         }
-        table{
-            border-collapse: collapse;
+        div{
+            width: 100%;
             text-align: center;
         }
-        th{
+        table {
+            border-collapse: collapse;
+            display: inline-block;
+        }
+
+        th {
             font-size: 20px;
             width: 70px;
         }
-        td{
+
+        td {
             font-size: 18px;
             width: 70px;
         }
-        sub{
+
+        sub {
             color: black;
             font-size: 14px;
         }
-        tr:nth-child(n+3) td{
+
+        tr:nth-child(n+3) td {
             border: 1px solid black;
             font-size: 25px;
         }
-        tr:nth-child(1) th:nth-child(1){
+
+        tr:nth-child(1) th:nth-child(1) {
             background-color: red;
             color: white;
         }
-        tr:nth-child(1) th:nth-child(n+2){
+
+        tr:nth-child(1) th:nth-child(n+2) {
             background-color: orange;
             color: white;
         }
-        tr:nth-child(1) th:nth-child(7){
+
+        tr:nth-child(1) th:nth-child(7) {
             background-color: blue;
             color: white;
         }
-        tr:nth-child(n+2) td:nth-child(1){
+
+        tr:nth-child(n+2) td:nth-child(1) {
             color: red;
         }
-        tr:nth-child(n+2) td:nth-child(7){
+
+        tr:nth-child(n+2) td:nth-child(7) {
             color: blue;
         }
     </style>
 </head>
 <body>
-    <h2>Tháng 4 - April</h2>
+<h2>Tháng 4 - April</h2>
+<div>
+
     <table cellpadding="5px 10px">
         <tr>
             <th>C.NHẬT</th>
@@ -117,5 +132,6 @@
             <td>31<sub>14</sub></td>
         </tr>
     </table>
+</div>
 </body>
 </html>
