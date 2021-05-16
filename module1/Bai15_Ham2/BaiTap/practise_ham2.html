@@ -29,25 +29,25 @@
         let request = parseInt(document.getElementById("result").value);
         switch (request) {
             case 1:
-                Bai1();
+                bai1();
                 break;
             case 2:
-                Bai2();
+                bai2();
                 break;
             case 3:
-                Bai3();
+                bai3();
                 break;
             case 4:
-                Bai4();
+                bai4();
                 break;
             case 5:
-                Bai5();
+                bai5();
                 break;
             case 6:
-                Bai6();
+                bai6();
                 break;
             case 7:
-                Bai7();
+                bai7();
                 break;
             case 8:
 
@@ -68,20 +68,20 @@
         }
     }
 
-    function Bai1() {
+    function bai1() {
         let number = parseFloat(prompt(" nhập số: "));
         let result = number * number;
         document.write("Bình phương của " + number + " = " + result);
     }
 
-    function Bai2() {
+    function bai2() {
         let R = parseFloat(prompt('Nhập bán kính của hình tròn: '));
         let S = R * R * 3.14;
         let C = 2 * R * 3.14;
         document.write('Diện tích hình tròn = ' + S + '<br/>' + 'Chu vi hình tròn = ' + C);
     }
 
-    function Bai3() {
+    function bai3() {
         let number = parseInt(prompt('Nhập vào số nguyên bất kỳ: '));
         let giaiThua = 1;
         for (let i = 1; i <= number; i++) {
@@ -90,7 +90,7 @@
         document.write(number + '! = ' + giaiThua);
     }
 
-    function Bai4() {
+    function bai4() {
         let input = prompt("nhập vào ký tự cần kiểm tra");
 
         function checkNumber(num) {
@@ -107,7 +107,7 @@
         document.write("Số cần kiểm tra là số True/False: " + checkNumber(input));
     }
 
-    function Bai5() {
+    function bai5() {
         let num1 = parseInt(prompt("nhập vào số thứ 1"));
         let num2 = parseInt(prompt("nhập vào số thứ 2"));
         let num3 = parseInt(prompt("nhập vào số thứ 3"));
@@ -123,7 +123,7 @@
         document.write('Số nhỏ nhất trong 3 số ' + num1 + ' ' + num2 + ' ' + num3 + ' là: ' + MinThreeNum(num1, num2, num3));
     }
 
-    function Bai6() {
+    function bai6() {
         let number = parseInt(prompt('Input: '));
         let result = "";
         if (number > 0) {
@@ -134,7 +134,7 @@
         document.write("Số cần kiểm tra là số True/False: " + result);
     }
 
-    function Bai7() {
+    function bai7() {
         function swap(a, b) {
             let temp = a.value;
             a.value = b.value;

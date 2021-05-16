@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let Temperature = function (doC) {
+    /*let Temperature = function (doC) {
         this.doC = doC;
 
         this.getDoF = function () {
@@ -18,6 +18,20 @@
     }
 
     let temperature = new Temperature(25);
+    document.write(25+'Độ C = '+temperature.getDoF()+'Độ F = '+temperature.getDoK()+'Độ K');*/
+    class Temperature{
+        constructor(doC) {
+            this.doC = doC;
+        }
+        getDoF(){
+            return 9 * this.doC / 5 + 32;
+        }
+        getDoK(){
+            return this.doC + 273.15;
+        }
+    }
+
+    let temperature= new Temperature(25);
     document.write(25+'Độ C = '+temperature.getDoF()+'Độ F = '+temperature.getDoK()+'Độ K');
 </script>
 </body>
