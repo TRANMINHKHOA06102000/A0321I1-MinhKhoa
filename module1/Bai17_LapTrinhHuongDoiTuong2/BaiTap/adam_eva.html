@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    //cách 1. code theo hướng dẫn sài class
+    class Apple {
+        constructor(weight) {
+            this.weight = 10;
+        }
+
+        decrease() {
+            this.weight--;
+        }
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    class Human {
+        constructor(name, weight) {
+            this.name = name;
+            this.gender = "";
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == "male") {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        setGender(sex) {
+            return this.gender = sex;
+        }
+
+        eat(apple) {
+            if (!apple.isEmpty()) {
+                this.weight += 1;
+                apple.decrease();
+                document.write(this.name + ' eat apple...' + '<br/>');
+            }
+        }
+
+        say(str) {
+            return str;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    let apple = new Apple();
+    let adam = new Human('Adam', 65);
+    let eva = new Human('Eva', 45);
+
+    adam.setGender('male');
+    eva.setGender('female');
+    while (apple.weight > 0) {
+        adam.eat(apple);
+        eva.eat(apple);
+    }
+    document.write('Apple are already eaten');
+
+    // cách 2. ko dùng class. sử dụng prototype
+
+    /*function Apple() {
+        this.weight = 10;
+    }
+
+    Apple.prototype.decrease = function () {
+        return this.weight--;
+    }
+    Apple.prototype.isEmpty = function () {
+        if (this.weight === 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+    Apple.prototype.getWeight = function () {
+        return this.weight;
+    }
+
+    function Human(name, weight) {
+        this.name = name;
+        this.gender = "";
+        this.weight = weight;
+    }
+
+    Human.prototype.isMale = function () {
+        if (this.gender == "male") {
+            return true
+        } else {
+            return false
+        }
+    }
+    Human.prototype.setGender = function (sex) {
+        return this.gender = sex;
+    }
+    Human.prototype.eatApple = function (apple) {
+        if (!apple.isEmpty()) {
+            this.weight += 1;
+            apple.decrease();
+            document.write(this.name + ' eat apple....' + '<br/>');
+        }
+    }
+
+    function theStory() {
+        let adam = new Human('adam', 60);
+        let eva = new Human('eva', 45);
+        let apple = new Apple()
+        adam.setGender('male');
+        eva.setGender('female');
+        while (apple.weight > 0) {
+            adam.eatApple(apple);
+            eva.eatApple(apple);
+        }
+        document.write('Apple are already eaten');
+    }
+
+    theStory();*/
+</script>
+</body>
+</html>
