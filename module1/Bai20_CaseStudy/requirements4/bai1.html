@@ -6,34 +6,17 @@
 </head>
 <body>
 <script>
-    /*//hàm tìm từ dài nhất trong 1 xâu ký tự
-    function longestWord(text) {
-        let s='';
-        let a=new Array();
-        for(let i = 0; i < text.length; i++){
-            if('a' <= text[i] && text[i] <= 'z' || 'A' <= text[i] && text[i] <= 'Z'){
-                s += text[i];
-            }
-            else{
-                a.Add(s);
-                s = '';
-            }
-        }
-        let b = a.ToArray();
-        let max = 0;
-        for(let i = 0; i < b.length; i++){
-            if(b[i].length > max){
-                max = b[i].length;
-            }
-        }
-
-        foreach(let i in b){
-            if(i.length == max){
-                s = i;
-            }
-        }
-        return s;
-    }*/
+    let s1 = prompt('Nhập chuỗi: ');
+    let s2 = s1.replace(/\s+/g, ' ');
+    let s = s2.trim().toLowerCase();
+    let newArray = s.split(' ');
+    let array = [];
+    newArray.forEach(function (item) {
+        let newItem = item.charAt(0).toUpperCase() + item.slice(1);
+        array.push(newItem);
+    });
+    document.write("Chuỗi đã nhập: "+ s1+"<br/>");
+    document.write("Chuỗi đã chuẩn hóa: "+array.join(' '));
 </script>
 </body>
 </html>
